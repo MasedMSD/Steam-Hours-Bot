@@ -10,7 +10,6 @@ const Games: Array<number> = [
 	730, // CS2 | CS:GO
 	1966720, // Lethal Company
 	400040, // ShareX
-	431960, // Wallpaper Engine
 	1905180, // OBS Studio
 ];
 
