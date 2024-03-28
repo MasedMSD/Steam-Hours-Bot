@@ -1,5 +1,5 @@
-import { resolve } from "path";
 import { config } from "dotenv";
+import { resolve } from "path";
 import SteamTotp from "steam-totp";
 import SteamUser from "steam-user";
 
@@ -10,7 +10,6 @@ const Games: Array<number> = [
 	730, // CS2 | CS:GO
 	1966720, // Lethal Company
 	400040, // ShareX
-	1905180, // OBS Studio
 ];
 
 (async () => {
