@@ -26,7 +26,7 @@ const Games: Array<number> = [
 		console.log(`${process.env.ACCOUNT_NAME} logged on!`);
 
 		user.setPersona(7); // Invisible
-		user.on("error", (err) => console.error(err));
+		user.on("error", err => console.error(err));
 		user.on("disconnected", (result, msg) => console.error(`Disconnected : [EResult: ${result}]\n ${msg}`));
 		user.gamesPlayed(Games);
 	});

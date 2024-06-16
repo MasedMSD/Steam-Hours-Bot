@@ -1,9 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"lib": [
-			"ESNext",
-		],
+		"lib": ["ESNext"],
 		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"baseUrl": "./src",
@@ -23,11 +21,6 @@
 		"allowUnreachableCode": true,
 		"skipLibCheck": true
 	},
-	"include": [
-		"src"
-	],
-	"exclude": [
-		"dist",
-		"node_modules"
-	]
+	"include": ["src"],
+	"exclude": ["dist", "node_modules"]
 }

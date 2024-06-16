@@ -1,26 +1,26 @@
 {
-  "name": "steam-hours-bot",
-  "main": "./dist/index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "start": "node .",
-    "update": "npm run git:update && npm run pm2:restart",
-    "format": "biome format --write src/**",
-    "pm2:start": "pm2 start npm --name \"steam_hours_bot\" -- start",
-    "pm2:restart": "pm2 restart \"steam_hours_bot\""
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "steam-totp": "^2.1.2",
-    "steam-user": "^5.0.8"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "latest",
-    "@types/node": "latest",
-    "@types/steam-totp": "^2.1.2",
-    "@types/steam-user": "^4.26.8",
-    "tslib": "^2.6.2",
-    "typescript": "latest"
-  }
+	"name": "steam-hours-bot",
+	"main": "./dist/index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"start": "node .",
+		"update": "npm run git:update && npm run pm2:restart",
+		"format": "prettier --write src/**",
+		"pm2:start": "pm2 start npm --name \"steam_hours_bot\" -- start",
+		"pm2:restart": "pm2 restart \"steam_hours_bot\""
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"steam-totp": "^2.1.2",
+		"steam-user": "^5.0.8"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/steam-totp": "^2.1.2",
+		"@types/steam-user": "^4.26.8",
+		"prettier": "^3.3.2",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.5"
+	}
 }
