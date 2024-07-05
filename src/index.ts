@@ -7,9 +7,8 @@ const user = new SteamUser({ language: "russian", autoRelogin: true });
 config({ path: resolve(process.cwd(), ".env") });
 
 const Games: Array<number> = [
-	730, // CS2 | CS:GO
-	1966720, // Lethal Company
-	400040, // ShareX
+	2881650, // Content Warning
+	2835570, // Buckshot Roullete
 ];
 
 (async () => {
@@ -19,7 +18,7 @@ const Games: Array<number> = [
 		rememberPassword: true,
 		twoFactorCode: process.env.SHARED_SECRET
 			? SteamTotp.getAuthCode(process.env.SHARED_SECRET)
-			: process.argv.slice(2)[0],
+			: process.argv.slice(2)[0]?.toUpperCase(),
 	});
 
 	user.once("loggedOn", () => {
