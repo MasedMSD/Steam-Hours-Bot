@@ -3,18 +3,8 @@
 # Build
 dist/
 
-# Logs
-logs
-_.log
-npm-debug.log_
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # dotenv environment variable files
 .env*
@@ -27,3 +17,6 @@ jspm_packages/
 .yarn/install-state.gz
 .yarn-integrity
 .pnp.*
+
+# Steam IDs
+src/games.json

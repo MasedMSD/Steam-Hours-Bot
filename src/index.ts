@@ -6,10 +6,13 @@ import SteamUser from "steam-user";
 const user = new SteamUser({ language: "russian", autoRelogin: true });
 config({ path: resolve(process.cwd(), ".env") });
 
-const Games: Array<number> = [
-	2881650, // Content Warning
-	2835570, // Buckshot Roullete
-];
+/**
+ * @type {Array<number>}
+ * @description Steam Game IDs
+ *
+ * @example [2881650, 1422450]
+ */
+const games: Array<number> = require("./games.json");
 
 (async () => {
 	user.logOn({
@@ -24,9 +27,10 @@ const Games: Array<number> = [
 	user.once("loggedOn", () => {
 		console.log(`${process.env.ACCOUNT_NAME} logged on!`);
 
-		user.setPersona(7); // Invisible
 		user.on("error", err => console.error(err));
 		user.on("disconnected", (result, msg) => console.error(`Disconnected : [EResult: ${result}]\n ${msg}`));
-		user.gamesPlayed(Games);
+
+		user.setPersona(7); // Invisible
+		user.gamesPlayed(games);
 	});
 })();
