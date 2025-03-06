@@ -11,6 +11,7 @@
         "@types/node": "latest",
         "@types/steam-totp": "^2.1.2",
         "@types/steam-user": "^5.0.4",
+        "prettier": "^3.5.3",
       },
     },
   },
@@ -154,6 +155,8 @@
     "permessage-deflate": ["permessage-deflate@0.1.7", "", { "dependencies": { "safe-buffer": "*" } }, "sha512-EUNi/RIsyJ1P1u9QHFwMOUWMYetqlE22ZgGbad7YP856WF4BFF0B7DuNy6vEGsgNNud6c/SkdWzkne71hH8MjA=="],
 
     "possible-typed-array-names": ["possible-typed-array-names@1.1.0", "", {}, "sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg=="],
+
+    "prettier": ["prettier@3.5.3", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw=="],
 
     "protobufjs": ["protobufjs@5.0.3", "", { "dependencies": { "ascli": "~1", "bytebuffer": "~5", "glob": "^7.0.5", "yargs": "^3.10.0" }, "bin": { "pbjs": "./bin/pbjs" } }, "sha512-55Kcx1MhPZX0zTbVosMQEO5R6/rikNXd9b6RQK4KSPcrSIIwoXTtebIczUrXlwaSrbz4x8XUVThGPob1n8I4QA=="],
 
