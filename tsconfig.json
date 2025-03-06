@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"lib": ["ESNext"],
-		"module": "CommonJS",
+		"module": "ESNext",
 		"moduleResolution": "Node",
 		"baseUrl": "./src",
 		"outDir": "./dist",
@@ -14,6 +14,7 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
+		"resolveJsonModule": true,
 		"noImplicitThis": true,
 		"noUnusedParameters": true,
 		"noUncheckedIndexedAccess": true,

@@ -1,26 +1,27 @@
 {
 	"name": "steam-hours-bot",
+	"packageManager": "bun@1.1.39",
+	"module": "./src/index.ts",
 	"main": "./dist/index.js",
 	"license": "MIT",
+	"private": true,
 	"scripts": {
-		"build": "tsc",
 		"start": "node .",
-		"update": "npm run git:update && npm run pm2:restart",
-		"format": "prettier --write src/**",
-		"pm2:start": "pm2 start npm --name \"steam_hours_bot\" -- start",
-		"pm2:restart": "pm2 restart \"steam_hours_bot\""
+		"bun:start": "bun src/index.ts",
+		"bun:smol": "bun --smol src/index.ts",
+		"bun:watch": "bun --watch src/index.ts",
+		"pm2:start": "pm2 start npm --ignore-watch=\"node_modules\" --name \"steam_hours_bot\" -- start",
+		"pm2:bun_start": "pm2 start bun --ignore-watch=\"node_modules\" --name \"steam_hours_bot\" -- bun:start",
+		"pm2:restart": "pm2 restart \"steam_hours_bot\"",
+		"pm2:stop": "pm2 stop \"steam_hours_bot\""
 	},
 	"dependencies": {
-		"dotenv": "^16.4.5",
 		"steam-totp": "^2.1.2",
-		"steam-user": "^5.0.8"
+		"steam-user": "^3.7.2"
 	},
 	"devDependencies": {
 		"@types/node": "latest",
 		"@types/steam-totp": "^2.1.2",
-		"@types/steam-user": "^4.26.8",
-		"prettier": "^3.3.2",
-		"tslib": "^2.6.2",
-		"typescript": "^5.4.5"
+		"@types/steam-user": "^5.0.4"
 	}
 }
