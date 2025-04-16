@@ -1,6 +1,6 @@
 {
 	"name": "steam-hours-bot",
-	"packageManager": "bun@1.1.39",
+	"packageManager": "bun@1.2.9",
 	"module": "./src/index.ts",
 	"main": "./dist/index.js",
 	"license": "MIT",

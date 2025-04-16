@@ -1,4 +1,4 @@
-import SteamTOTP from "steam-totp";
+import { getAuthCode } from "steam-totp";
 import SteamUser from "steam-user";
 
 /**
@@ -9,16 +9,11 @@ import SteamUser from "steam-user";
  */
 import games from "./games.json" with { type: "json" };
 
-const user = new SteamUser({ language: "russian", autoRelogin: false, dataDirectory: null });
 const { ACCOUNT_NAME, PASSWORD, SHARED_SECRET } = process.env;
+const user = new SteamUser({ language: "russian", autoRelogin: false, dataDirectory: null });
+const twoFactorCode = SHARED_SECRET.length ? getAuthCode(SHARED_SECRET) : process.argv.slice(2)[0]?.toUpperCase();
 
-const accountName = ACCOUNT_NAME;
-const password = PASSWORD;
-const twoFactorCode = SHARED_SECRET.length
-	? SteamTOTP.getAuthCode(SHARED_SECRET)
-	: process.argv.slice(2)[0]?.toUpperCase();
-
-user.logOn({ accountName, password, twoFactorCode });
+user.logOn({ accountName: ACCOUNT_NAME, password: PASSWORD, twoFactorCode });
 
 user.on("loggedOn", () => {
 	console.log(`Logged into Steam as ${ACCOUNT_NAME} [${user.steamID?.getSteamID64()}]`);
