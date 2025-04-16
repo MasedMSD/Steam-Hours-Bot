@@ -7,7 +7,7 @@ dist/
 node_modules/
 
 # dotenv environment variable files
-.env*
+.env
 
 # yarn v2 | npm | pnpm
 .npm
